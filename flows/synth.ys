@@ -1,0 +1,13 @@
+read_verilog -sv designs/binary_to_gray/rtl/design.sv
+
+hierarchy -top binary_to_gray
+
+proc
+memory
+opt
+techmap
+opt
+
+stat
+
+write_verilog -noattr -noexpr netlist.v
